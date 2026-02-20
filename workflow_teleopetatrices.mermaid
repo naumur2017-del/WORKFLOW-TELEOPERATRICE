@@ -1,0 +1,44 @@
+graph TB
+    Start([Nouveau Contact]) --> A[1. Identification et Catégorisation]
+    
+    A --> A1[Marquage du contact<br/>avec indice/étoiles]
+    A1 --> A2[Codification selon origine<br/>ex: ONU, etc.]
+    
+    A2 --> B[2. Envoi de Messages Ciblés]
+    B --> B1{Prospect<br/>identifié pour<br/>vente?}
+    B1 -->|Oui| B2[Signalement de vente]
+    B1 -->|Non| B3[Suivi prospect]
+    
+    B2 --> B4[Adaptation du contenu<br/>selon catégorie]
+    B3 --> B4
+    
+    B4 --> C[3. Suivi et Confirmation de Paiement]
+    C --> C1[Surveillance active sur<br/>WhatsApp Business]
+    C1 --> C2[Demande de preuve de paiement<br/>photo app/reçu]
+    
+    C2 --> D{Paiement<br/>confirmé?}
+    
+    D -->|Non| E[4. Boucle de Relance]
+    E --> E1[Identification des blocages]
+    E1 --> E2[Relance: alternance<br/>appels + WhatsApp]
+    E2 --> E3[Bilan de fin de journée<br/>reprise des dossiers]
+    E3 --> C1
+    
+    D -->|Oui| F[5. Actions Post-Paiement]
+    F --> F1[Préparation messages techniques<br/>depuis ordinateur]
+    F1 --> F2[Gestion des catalogues<br/>indépendants]
+    
+    F2 --> G[6. Processus de Validation]
+    G --> G1[Approbation des messages<br/>avant envoi]
+    G1 --> G2[Respect du calendrier<br/>de campagnes]
+    G2 --> End([Fin du processus])
+    
+    style Start fill:#e1f5e1
+    style End fill:#ffe1e1
+    style A fill:#e3f2fd
+    style B fill:#fff3e0
+    style C fill:#f3e5f5
+    style D fill:#ffccbc
+    style E fill:#ffcdd2
+    style F fill:#c8e6c9
+    style G fill:#b2dfdb
